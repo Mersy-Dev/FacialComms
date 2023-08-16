@@ -94,3 +94,18 @@
     width: 80%;
     background: rgb(198, 198, 198);
 }
+
+@media screen and (max-width: 640px) {
+    .wrapperr{
+        grid-template-columns: 1fr;
+    }
+
+    .wrapperr>img{
+        width: 80vw;
+    }
+    .wrapperr>:nth-child(3), .wrapperr>:nth-child(1){
+        text-align: center;
+    }
+
+
+}

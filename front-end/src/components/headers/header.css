@@ -60,7 +60,7 @@
 @media screen and (max-width: 640px) {
     .ryt {
         position: absolute;
-        right: 5rem;
+        right: 1rem;
         z-index: 9999;
         background: white;
         color: var(--black);
