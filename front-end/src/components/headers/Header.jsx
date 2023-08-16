@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './header.css'
 import LOGO from '../../assets/logo.png'
-import {CgShoppingBag} from 'react-icons/cg'
+import { CgShoppingBag } from 'react-icons/cg'
+import { FaBars } from 'react-icons/fa'
+
 
 const Header = () => {
+
+  const [ShowMenu, setShowMenu] = useState(true)
+  const toggleMenu = () => {
+    setShowMenu((ShowMenu) => !ShowMenu)
+
+  }
+
   return (
     <div className="container">
       <div className="logo">
@@ -12,9 +21,13 @@ const Header = () => {
         <span>Amazon</span>
       </div>
 
-      <div className="right">
-        <div className="menu">
-          <ul className='menu'>
+      <div className="ryt">
+
+        <div className="bars" onClick={toggleMenu} >
+          <FaBars />
+        </div>
+
+          <ul className='menu'style={{display: ShowMenu ? 'inherit' : 'none'}}>
             <li>Collections</li>
             <li>Brands</li>
             <li>New</li>
@@ -22,9 +35,7 @@ const Header = () => {
             <li>Eng</li>
           </ul>
 
-        </div>
-
-        <input type="text" name="" id="" className="search"  placeholder='search'/>
+        <input type="text" name="" id="" className="search" placeholder='search' />
         <CgShoppingBag className="" />
 
       </div>

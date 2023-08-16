@@ -19,7 +19,7 @@
     font-weight: 600;
 }
 
-.right {
+.ryt {
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -38,7 +38,7 @@
     cursor: pointer;
 }
 
-.search{
+.search {
     width: 7rem;
     height: 30%;
     outline: none;
@@ -47,8 +47,39 @@
     padding: 0.5rem;
 }
 
-.cart{
+.cart {
     width: 1.5rem;
     height: 1.5rem;
     cursor: pointer;
+}
+
+.bars{
+    display: none;
+}
+
+@media screen and (max-width: 640px) {
+    .ryt {
+        position: absolute;
+        right: 5rem;
+        z-index: 9999;
+        background: white;
+        color: var(--black);
+        border-radius: 5px;
+        flex-direction: column;
+        padding:1rem;
+    }
+
+    .menu{
+        flex-direction: column;
+        margin-left: -2rem;
+        display: none;
+    }
+
+    .bars{
+        display: block;
+    }
+
+    .search{
+        display: none;
+    }
 }
